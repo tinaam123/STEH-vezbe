@@ -27,7 +27,7 @@
                     <td> <?php echo $pr["cena"] ?></td>
                     <td>
                         <form action="" method="post">
-                            <input type="hidden" name="id" value="id-1">
+                            <input type="hidden" name="id" value="<?php echo $pr["id"] ?>">
                             <input type="submit" name="submit" value="Kupi">
                         </form>
                     </td>

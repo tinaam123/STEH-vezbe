@@ -22,7 +22,7 @@
         <tfoot>
             <tr>
                 <td>Ukupno:</td>
-                <td>800</td>
+                <td><?php echo $_SESSION["ukupno"] ?></td>
             </tr>
         </tfoot>
         <tbody>

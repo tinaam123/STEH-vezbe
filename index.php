@@ -23,4 +23,22 @@ $proizvodi = array(
 
 );
 
+session_start();
+if (!isset($_SESSION["ukupno"])) {
+    $_SESSION["ukpno"] = 0;
+}
+
+if (isset($_POST["submit"]) && $_POST["submit"] == 'Kupi') {
+    foreach ($proizvodi as $pr) {
+        if ($pr["id"] == $_POST["id"]) {
+            $_SESSION["ukpno"] += $pr["cena"];
+        }
+    }
+}
+
+if (isset($_GET['vidi_korpu'])) {
+    include "korpa.php";
+    exit();
+}
+
 include "katalog.php";
